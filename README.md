@@ -16,3 +16,6 @@ Projeto com o objetivo de aprender mais sobre componetização e estruturação 
 ## Como testar
 
 Para testar necessário realizar um clone do projeto instalar as dependências, rodar o comando para inicializar o script de dev que pode ser `yarn dev` ou `npm dev`
+
+## Link para usar o projeto
+https://todoappignite.netlify.app
