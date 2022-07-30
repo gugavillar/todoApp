@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import { Trash } from 'phosphor-react'
 
-import { TodoList } from '../../types/data'
+import { TodoList } from '../../@types/data'
 import { Checkbox } from '../Checkbox'
 
 import styles from './Task.module.css'
@@ -13,7 +13,11 @@ interface TaskProps {
 }
 
 export const Task = memo(
-  ({ todo: { content, id, isChecked }, onCheckedOrUncheckedTask, onDeleteTask }: TaskProps) => {
+  ({
+    todo: { content, id, isChecked },
+    onCheckedOrUncheckedTask,
+    onDeleteTask,
+  }: TaskProps) => {
     const handleDeleteTask = () => onDeleteTask(id)
 
     return (

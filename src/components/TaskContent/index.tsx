@@ -3,7 +3,7 @@ import { TaskContentHeader } from './TaskContentHeader'
 import { EmptyTask } from '../EmptyTask'
 import { Task } from '../Task'
 
-import { TodoList } from '../../types/data'
+import { TodoList } from '../../@types/data'
 
 import styles from './TaskContent.module.css'
 
@@ -13,7 +13,11 @@ interface TaskContentProps {
   onDeleteTask: (id: string) => void
 }
 
-export const TaskContent = ({ todoList, onCheckedOrUncheckedTask, onDeleteTask }: TaskContentProps) => {
+export const TaskContent = ({
+  todoList,
+  onCheckedOrUncheckedTask,
+  onDeleteTask,
+}: TaskContentProps) => {
   const createdTaskNumber = todoList?.length
 
   const concludedTaskNumber = useMemo(
@@ -35,7 +39,10 @@ export const TaskContent = ({ todoList, onCheckedOrUncheckedTask, onDeleteTask }
 
   return (
     <main className={styles.container}>
-      <TaskContentHeader concludedTask={concludedTaskNumber} createdTask={createdTaskNumber} />
+      <TaskContentHeader
+        concludedTask={concludedTaskNumber}
+        createdTask={createdTaskNumber}
+      />
       {!hasTask ? (
         <EmptyTask />
       ) : (
