@@ -9,14 +9,22 @@ interface CheckboxProps {
   onCheckedOrUncheckedTask: (id: string) => void
 }
 
-export const Checkbox = memo(({ label, isChecked, taskId, onCheckedOrUncheckedTask }: CheckboxProps) => {
-  const handleCheckedOrUncheckedTask = () => onCheckedOrUncheckedTask(taskId)
+export const Checkbox = memo(
+  ({ label, isChecked, taskId, onCheckedOrUncheckedTask }: CheckboxProps) => {
+    const handleCheckedOrUncheckedTask = () => onCheckedOrUncheckedTask(taskId)
 
-  return (
-    <label className={styles.container}>
-      <span className={isChecked ? styles.checked : ''}>{label}</span>
-      <input type='checkbox' onChange={handleCheckedOrUncheckedTask} checked={isChecked} />
-      <span className={styles.checkmark}></span>
-    </label>
-  )
-})
+    return (
+      <label className={styles.container}>
+        <span className={isChecked ? styles.checked : ''}>{label}</span>
+        <input
+          type="checkbox"
+          onChange={handleCheckedOrUncheckedTask}
+          checked={isChecked}
+        />
+        <span className={styles.checkmark}></span>
+      </label>
+    )
+  },
+)
+
+Checkbox.displayName = 'Checkbox'

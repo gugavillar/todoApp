@@ -15,7 +15,7 @@ export const App = () => {
 
   const handleCheckedOrUncheckedTask = (id: string) => {
     const todoListWithCheckedItens = todoList.map((todo) =>
-      id === todo.id ? { ...todo, isChecked: !todo?.isChecked } : todo
+      id === todo.id ? { ...todo, isChecked: !todo?.isChecked } : todo,
     )
     setTodoList(todoListWithCheckedItens)
   }

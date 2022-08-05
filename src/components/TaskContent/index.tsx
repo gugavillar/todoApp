@@ -28,12 +28,8 @@ export const TaskContent = ({
         }
         return acc
       }, 0),
-    [todoList]
+    [todoList],
   )
-
-  const sortTask = (task1: TodoList) => {
-    return task1.isChecked === false
-  }
 
   const hasTask = todoList?.length
 

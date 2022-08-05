@@ -35,5 +35,7 @@ export const Task = memo(
         </div>
       </section>
     )
-  }
+  },
 )
+
+Task.displayName = 'Task'

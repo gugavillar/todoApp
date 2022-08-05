@@ -10,3 +10,5 @@ export const Header = memo(() => {
     </header>
   )
 })
+
+Header.displayName = 'Header'

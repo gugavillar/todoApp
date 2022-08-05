@@ -1,11 +1,14 @@
 import styles from './TaskContentHeader.module.css'
 
-interface TaskContentHeader {
+interface TaskContentHeaderProps {
   concludedTask: number
   createdTask: number
 }
 
-export const TaskContentHeader = ({ concludedTask, createdTask }: TaskContentHeader) => {
+export const TaskContentHeader = ({
+  concludedTask,
+  createdTask,
+}: TaskContentHeaderProps) => {
   return (
     <div className={styles.content}>
       <div className={styles.created}>

@@ -3,6 +3,6 @@
     "prettier --write"
   ],
   "src/**/*.+(js,ts,json,css,scss,md)": [
-    "tslint"
+    "eslint"
   ]
 }
