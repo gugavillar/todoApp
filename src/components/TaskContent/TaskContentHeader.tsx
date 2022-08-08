@@ -7,7 +7,7 @@ interface TaskContentHeaderProps {
 
 export const TaskContentHeader = ({
   concludedTask,
-  createdTask,
+  createdTask
 }: TaskContentHeaderProps) => {
   return (
     <div className={styles.content}>

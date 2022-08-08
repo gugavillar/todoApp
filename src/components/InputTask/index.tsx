@@ -21,7 +21,7 @@ export const InputTask = ({ onAddTodoTask }: InputTaskProps) => {
     const newTodo = {
       id: uuidv4(),
       isChecked: false,
-      content: todoText,
+      content: todoText
     }
     setTodoText('')
     onAddTodoTask(newTodo)

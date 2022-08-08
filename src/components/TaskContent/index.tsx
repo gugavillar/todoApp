@@ -16,7 +16,7 @@ interface TaskContentProps {
 export const TaskContent = ({
   todoList,
   onCheckedOrUncheckedTask,
-  onDeleteTask,
+  onDeleteTask
 }: TaskContentProps) => {
   const createdTaskNumber = todoList?.length
 
@@ -28,7 +28,7 @@ export const TaskContent = ({
         }
         return acc
       }, 0),
-    [todoList],
+    [todoList]
   )
 
   const hasTask = todoList?.length

@@ -24,7 +24,7 @@ export const Checkbox = memo(
         <span className={styles.checkmark}></span>
       </label>
     )
-  },
+  }
 )
 
 Checkbox.displayName = 'Checkbox'

@@ -16,7 +16,7 @@ export const Task = memo(
   ({
     todo: { content, id, isChecked },
     onCheckedOrUncheckedTask,
-    onDeleteTask,
+    onDeleteTask
   }: TaskProps) => {
     const handleDeleteTask = () => onDeleteTask(id)
 
@@ -35,7 +35,7 @@ export const Task = memo(
         </div>
       </section>
     )
-  },
+  }
 )
 
 Task.displayName = 'Task'
