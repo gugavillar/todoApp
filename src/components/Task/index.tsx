@@ -1,9 +1,9 @@
 import { memo } from 'react'
+
 import { Trash } from 'phosphor-react'
 
 import { TodoList } from '../../@types/data'
 import { Checkbox } from '../Checkbox'
-
 import styles from './Task.module.css'
 
 interface TaskProps {

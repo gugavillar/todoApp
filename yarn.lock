@@ -1397,10 +1397,10 @@ escodegen@^1.8.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-helpmydesk@^1.1.5:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/eslint-config-helpmydesk/-/eslint-config-helpmydesk-1.1.5.tgz#22706a44cdd9a3ba4ab1652c88fbe4d6114c9ce0"
-  integrity sha512-XfN2cEJMcH4/+c5hBtKBKze8ZP2hecD/ZGneSbEDo9BE549TBSzOscejXdSCglCry7dLf7azjV+9HsI1rxsNNg==
+eslint-config-helpmydesk@^1.1.9:
+  version "1.1.9"
+  resolved "https://registry.yarnpkg.com/eslint-config-helpmydesk/-/eslint-config-helpmydesk-1.1.9.tgz#743d79dd23dca38f5bf0ac1e9f2232db8f243b24"
+  integrity sha512-Gu5jf5g3/h2x6yUOpjawwu/UGaOjmMgt9bIjmQvaf7o1R3GVRXfCmh/m0MUaa5p6hhIUXsBWJX34GiJiWoB2ng==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.25.0"
     "@typescript-eslint/parser" "^5.25.0"

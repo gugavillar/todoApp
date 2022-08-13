@@ -1,11 +1,10 @@
 import { useMemo } from 'react'
-import { TaskContentHeader } from './TaskContentHeader'
-import { EmptyTask } from '../EmptyTask'
-import { Task } from '../Task'
 
 import { TodoList } from '../../@types/data'
-
+import { EmptyTask } from '../EmptyTask'
+import { Task } from '../Task'
 import styles from './TaskContent.module.css'
+import { TaskContentHeader } from './TaskContentHeader'
 
 interface TaskContentProps {
   todoList: Array<TodoList>

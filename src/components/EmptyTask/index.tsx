@@ -1,5 +1,4 @@
 import { Clipboard } from '../Icons/Clipboard'
-
 import styles from './EmptyTask.module.css'
 
 export const EmptyTask = () => {

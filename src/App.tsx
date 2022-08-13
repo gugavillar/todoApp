@@ -1,10 +1,9 @@
 import { Fragment, useState } from 'react'
 
+import { TodoList } from './@types/data'
 import { Header } from './components/Header'
 import { InputTask } from './components/InputTask'
 import { TaskContent } from './components/TaskContent'
-
-import { TodoList } from './@types/data'
 
 export const App = () => {
   const [todoList, setTodoList] = useState<Array<TodoList>>([])

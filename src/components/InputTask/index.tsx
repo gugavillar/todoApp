@@ -1,9 +1,9 @@
-import { v4 as uuidv4 } from 'uuid'
 import { ChangeEvent, FormEvent, useState } from 'react'
+
 import { PlusCircle } from 'phosphor-react'
+import { v4 as uuidv4 } from 'uuid'
 
 import { TodoList } from '../../@types/data'
-
 import styles from './InputTask.module.css'
 
 interface InputTaskProps {
