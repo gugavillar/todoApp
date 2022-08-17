@@ -1,6 +1,5 @@
 import { Fragment, useState } from 'react'
 
-import { Button } from '@components/Button'
 import { Header } from '@components/Header'
 import { InputTask } from '@components/InputTask'
 import { TaskContent } from '@components/TaskContent'
@@ -28,9 +27,7 @@ export const App = () => {
   return (
     <Fragment>
       <Header />
-      <InputTask onAddTodoTask={handleAddTodoTask}>
-        <Button />
-      </InputTask>
+      <InputTask onAddTodoTask={handleAddTodoTask} />
       <TaskContent
         todoList={todoList}
         onCheckedOrUncheckedTask={handleCheckedOrUncheckedTask}

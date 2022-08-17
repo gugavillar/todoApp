@@ -2,8 +2,12 @@ import { PlusCircle } from 'phosphor-react'
 
 import styles from './styles.module.css'
 
-export const Button = () => (
-  <button>
+interface ButtonProps {
+  isDisabled: boolean
+}
+
+export const Button = ({ isDisabled }: ButtonProps) => (
+  <button disabled={isDisabled}>
     Criar{' '}
     <PlusCircle
       size={16}

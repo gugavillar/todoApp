@@ -1,17 +1,17 @@
-import { ChangeEvent, FormEvent, useState, ReactNode } from 'react'
+import { ChangeEvent, FormEvent, useState } from 'react'
 
 import { v4 as uuidv4 } from 'uuid'
 
+import { Button } from '@components/Button'
 import { TodoList } from '@typesData'
 
 import styles from './InputTask.module.css'
 
 interface InputTaskProps {
   onAddTodoTask: (todo: TodoList) => void
-  children: ReactNode
 }
 
-export const InputTask = ({ onAddTodoTask, children }: InputTaskProps) => {
+export const InputTask = ({ onAddTodoTask }: InputTaskProps) => {
   const [todoText, setTodoText] = useState('')
 
   const handleSetTodoText = (event: ChangeEvent<HTMLInputElement>) =>
@@ -28,6 +28,8 @@ export const InputTask = ({ onAddTodoTask, children }: InputTaskProps) => {
     onAddTodoTask(newTodo)
   }
 
+  const hasTodoTextInput = !todoText?.length
+
   return (
     <form
       className={styles.form}
@@ -39,7 +41,7 @@ export const InputTask = ({ onAddTodoTask, children }: InputTaskProps) => {
         value={todoText}
         onChange={handleSetTodoText}
       />
-      {children}
+      <Button isDisabled={hasTodoTextInput} />
     </form>
   )
 }
