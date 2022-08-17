@@ -1,6 +1,7 @@
 import { memo } from 'react'
 
-import { Logo } from '../Logo'
+import { Logo } from '@components/Logo'
+
 import styles from './Header.module.css'
 
 export const Header = memo(() => {

@@ -10,7 +10,10 @@ export const Clipboard = memo(() => {
       fill="none"
       viewBox="0 0 56 56"
     >
-      <path fill="url(#pattern0)" d="M0 0H56V56H0z"></path>
+      <path
+        fill="url(#pattern0)"
+        d="M0 0H56V56H0z"
+      ></path>
       <defs>
         <pattern
           id="pattern0"
@@ -18,7 +21,10 @@ export const Clipboard = memo(() => {
           height="1"
           patternContentUnits="objectBoundingBox"
         >
-          <use transform="scale(.01)" xlinkHref="#image0_43_191"></use>
+          <use
+            transform="scale(.01)"
+            xlinkHref="#image0_43_191"
+          ></use>
         </pattern>
         <image
           id="image0_43_191"

@@ -1,12 +1,23 @@
-import { Clipboard } from '../Icons/Clipboard'
+import { memo } from 'react'
+
+import { Clipboard } from '@components/Icons/Clipboard'
+
 import styles from './EmptyTask.module.css'
 
-export const EmptyTask = () => {
+const HeaderEmptyTask = () => (
+  <strong>Você ainda não tem tarefas cadastradas</strong>
+)
+
+const TextEmptyTask = () => <p>Crie tarefas e organize seus itens a fazer</p>
+
+export const EmptyTask = memo(() => {
   return (
     <div className={styles.container}>
       <Clipboard />
-      <strong>Você ainda não tem tarefas cadastradas</strong>
-      <p>Crie tarefas e organize seus itens a fazer</p>
+      <HeaderEmptyTask />
+      <TextEmptyTask />
     </div>
   )
-}
+})
+
+EmptyTask.displayName = 'EmptyTask'

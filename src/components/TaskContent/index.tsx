@@ -1,8 +1,9 @@
 import { useMemo } from 'react'
 
-import { TodoList } from '../../@types/data'
-import { EmptyTask } from '../EmptyTask'
-import { Task } from '../Task'
+import { EmptyTask } from '@components/EmptyTask'
+import { Task } from '@components/Task'
+import { TodoList } from '@typesData'
+
 import styles from './TaskContent.module.css'
 import { TaskContentHeader } from './TaskContentHeader'
 

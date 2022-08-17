@@ -1,9 +1,10 @@
 import { Fragment, useState } from 'react'
 
-import { TodoList } from './@types/data'
-import { Header } from './components/Header'
-import { InputTask } from './components/InputTask'
-import { TaskContent } from './components/TaskContent'
+import { Button } from '@components/Button'
+import { Header } from '@components/Header'
+import { InputTask } from '@components/InputTask'
+import { TaskContent } from '@components/TaskContent'
+import { TodoList } from '@typesData'
 
 export const App = () => {
   const [todoList, setTodoList] = useState<Array<TodoList>>([])
@@ -27,7 +28,9 @@ export const App = () => {
   return (
     <Fragment>
       <Header />
-      <InputTask onAddTodoTask={handleAddTodoTask} />
+      <InputTask onAddTodoTask={handleAddTodoTask}>
+        <Button />
+      </InputTask>
       <TaskContent
         todoList={todoList}
         onCheckedOrUncheckedTask={handleCheckedOrUncheckedTask}
