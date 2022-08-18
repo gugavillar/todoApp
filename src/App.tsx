@@ -5,6 +5,8 @@ import { InputTask } from '@components/InputTask'
 import { TaskContent } from '@components/TaskContent'
 import { TodoList } from '@typesData'
 
+import 'react-toastify/dist/ReactToastify.min.css'
+
 export const App = () => {
   const [todoList, setTodoList] = useState<Array<TodoList>>([])
 

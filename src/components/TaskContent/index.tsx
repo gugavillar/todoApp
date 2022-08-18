@@ -1,7 +1,8 @@
-import { useMemo } from 'react'
+import { useMemo, Fragment } from 'react'
 
 import { EmptyTask } from '@components/EmptyTask'
 import { Task } from '@components/Task'
+import { WrapperLoaderComponent } from '@components/Wrapper'
 import { TodoList } from '@typesData'
 
 import styles from './TaskContent.module.css'
@@ -31,18 +32,12 @@ export const TaskContent = ({
     [todoList]
   )
 
-  const hasTask = todoList?.length
+  const hasTask = !todoList?.length
 
-  return (
-    <main className={styles.container}>
-      <TaskContentHeader
-        concludedTask={concludedTaskNumber}
-        createdTask={createdTaskNumber}
-      />
-      {!hasTask ? (
-        <EmptyTask />
-      ) : (
-        todoList
+  const Tasks = () => {
+    return (
+      <Fragment>
+        {todoList
           ?.sort((todo) => (todo.isChecked === false ? -1 : 1))
           ?.map((todo) => (
             <Task
@@ -51,8 +46,23 @@ export const TaskContent = ({
               onCheckedOrUncheckedTask={onCheckedOrUncheckedTask}
               onDeleteTask={onDeleteTask}
             />
-          ))
-      )}
+          ))}
+      </Fragment>
+    )
+  }
+
+  const TaskContainer = WrapperLoaderComponent(Tasks)
+
+  return (
+    <main className={styles.container}>
+      <TaskContentHeader
+        concludedTask={concludedTaskNumber}
+        createdTask={createdTaskNumber}
+      />
+      <TaskContainer
+        hasNoData={hasTask}
+        emptyComponent={<EmptyTask />}
+      />
     </main>
   )
 }
